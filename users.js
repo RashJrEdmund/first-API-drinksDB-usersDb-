@@ -17,7 +17,7 @@ function getOneUser(req, res) {
   }
 }
 
-async function updateOneUser(req, res) {
+async function updateOneUser (req, res) {
   const id = getIdFromUrl(req.url);
   const { firstName, lastName, email } = await readRequestData(req);
   if (!email || !firstName || !lastName) {

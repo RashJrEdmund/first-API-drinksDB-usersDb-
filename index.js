@@ -8,7 +8,7 @@ const {
   createDrink,
   deleteOneDrink
 } = require("./drinks");
-// importing functions for drinks and users
+
 const {
   getAllUsers,
   createUser,
@@ -65,19 +65,17 @@ function handleDrinksRequest(pathname, req, res) {
   }
 }
 
-/* 
-  the conditions in both handle'---'Request functions are such that are bcs you could:
+/*
+    the conditions in both handle'---'Request functions are such that are bcs you could:
     GET http://localhost/users
     POST http://localhost/users
-
     GET http://localhost/users/1
     PUT http://localhost/users/1
     PATCH http://localhost/users/1
     & DELETE http://localhost/users/1
-
  */
 
-function handleUsersRequest(pathname, req, res) {
+function handleUsersRequest (pathname, req, res) {
   const { method } = req;
   if (pathname === "/users") {
     if (method === "GET") {
